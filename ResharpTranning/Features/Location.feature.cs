@@ -20,22 +20,22 @@ namespace ResharpTranning.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.8.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("GetPosts")]
-    public partial class GetPostsFeature
+    [NUnit.Framework.DescriptionAttribute("Location")]
+    public partial class LocationFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "GetPosts.feature"
+#line 1 "Location.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "GetPosts", "\tTest GET posts operation with Restsharp.net", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Location", "\tTest the location functionality", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,24 +77,26 @@ namespace ResharpTranning.Features
         {
 #line 4
 #line hidden
-            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "email",
                         "password"});
-            table1.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "nilson@email.com",
                         "nilson"});
 #line 5
- testRunner.Given("I perform authinetication of user with following detail", ((string)(null)), table1, "Given ");
+ testRunner.Given("I perform authinetication of user with following detail", ((string)(null)), table2, "Given ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify author of the posts 1")]
-        public virtual void VerifyAuthorOfThePosts1()
+        [NUnit.Framework.DescriptionAttribute("Get the first Location and verify its city")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        public virtual void GetTheFirstLocationAndVerifyItsCity()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify author of the posts 1", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get the first Location and verify its city", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -119,69 +121,28 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 10
- testRunner.Given("I perform GET operation for \"posts/{postid}\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I perform GET operation for \"location?id={id}\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 11
- testRunner.And("I perform operation for post \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I perform operation for location as \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.Then("I should see the \"author\" name as \"Sarika\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see the \"city\" name as \"chennai\" in response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify author of the posts 5")]
-        public virtual void VerifyAuthorOfThePosts5()
+        [NUnit.Framework.DescriptionAttribute("Create new Location and verify its Address details")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        public virtual void CreateNewLocationAndVerifyItsAddressDetails()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify author of the posts 5", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 14
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 4
-this.FeatureBackground();
-#line hidden
-#line 15
- testRunner.Given("I perform GET operation for \"posts/{postid}\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create new Location and verify its Address details", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 16
- testRunner.And("I perform operation for post \"5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 17
- testRunner.Then("I should see the \"author\" name as \"Karthik KK\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify author of the posts 9")]
-        public virtual void VerifyAuthorOfThePosts9()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify author of the posts 9", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 19
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -204,14 +165,118 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "city",
+                            "country",
+                            "street",
+                            "flat no",
+                            "pincode",
+                            "type"});
+                table3.AddRow(new string[] {
+                            "Auckland",
+                            "NZ",
+                            "11th grey",
+                            "121A",
+                            "0629",
+                            "primary"});
+#line 17
+ testRunner.Given("I perform POST operation to create new location with following details", ((string)(null)), table3, "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "city",
+                            "country",
+                            "street",
+                            "flat no",
+                            "pincode",
+                            "type"});
+                table4.AddRow(new string[] {
+                            "Auckland",
+                            "NZ",
+                            "12th New Lynn",
+                            "121A",
+                            "0629",
+                            "primary"});
 #line 20
- testRunner.Given("I perform GET operation for \"posts/{postid}\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.And("I perform PUT operation to update the address details", ((string)(null)), table4, "And ");
 #line hidden
-#line 21
- testRunner.And("I perform operation for post \"9\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 23
+ testRunner.Then("I should see the \"address\" name as \"12th New Lynn\" for address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 22
- testRunner.Then("I should see the \"author\" name as \"Karthik KK\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Create new Location and verify its Address details and delete")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        public virtual void CreateNewLocationAndVerifyItsAddressDetailsAndDelete()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "smoke"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create new Location and verify its Address details and delete", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 26
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 4
+this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                            "city",
+                            "country",
+                            "street",
+                            "flat no",
+                            "pincode",
+                            "type"});
+                table5.AddRow(new string[] {
+                            "Auckland",
+                            "NZ",
+                            "11th grey",
+                            "121A",
+                            "0629",
+                            "primary"});
+#line 27
+ testRunner.Given("I perform POST operation to create new location with following details", ((string)(null)), table5, "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "city",
+                            "country",
+                            "street",
+                            "flat no",
+                            "pincode",
+                            "type"});
+                table6.AddRow(new string[] {
+                            "Auckland",
+                            "NZ",
+                            "12th New Lynn",
+                            "121A",
+                            "0629",
+                            "primary"});
+#line 30
+ testRunner.And("I perform PUT operation to update the address details", ((string)(null)), table6, "And ");
+#line hidden
+#line 33
+ testRunner.Then("I should see the \"address\" name as \"12th New Lynn\" for address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 34
+ testRunner.And("I perform DELETE operation of the newly created address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
